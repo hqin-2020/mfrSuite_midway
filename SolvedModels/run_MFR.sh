@@ -1,11 +1,11 @@
 #! /bin/bash
 
-nV=30
-nVtilde=0
+nV=0
+nVtilde=30
 V_bar=1.0
-Vtilde_bar=0.0
-sigma_V_norm=0.132
-sigma_Vtilde_norm=0.0
+Vtilde_bar=1.0
+sigma_V_norm=0
+sigma_Vtilde_norm=0.3
 
 if (( $(echo "$sigma_Vtilde_norm == 0.0" |bc -l) )); then
     domain_folder='WZV'
@@ -17,11 +17,11 @@ elif (( $(echo "$sigma_V_norm == 0.0" |bc -l) )); then
     mkdir -p ./bash/$domain_folder
 fi
 
-for chiUnderline in 1.0
+for chiUnderline in 0.2 0.5
 do
     for a_e in 0.14
     do
-        for a_h in 0.115 0.110
+        for a_h in 0.135
         do
             for gamma_e in 1.0
             do
