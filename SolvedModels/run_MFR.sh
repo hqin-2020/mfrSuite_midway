@@ -42,7 +42,7 @@ do
 #SBATCH --job-name=run
 #SBATCH --output=./job-outs/$domain_folder/$model_folder/run.out
 #SBATCH --error=./job-outs/$domain_folder/$model_folder/run.err
-#SBATCH --time=0-24:00:00
+#SBATCH --time=0-10:00:00
 #SBATCH --partition=broadwl
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=28
